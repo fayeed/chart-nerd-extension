@@ -19,7 +19,7 @@ chrome.browserAction.onClicked.addListener(function (tab) {
     setTimeout(() => {
       chrome.tabs.create(
         {
-          url: `https://chart-nerd.now.sh/build?url=${url}&tableName=${tableName}`,
+          url: `https://chart-nerd.now.sh/build?url=${tab.url}&tableName=${tableName}`,
         },
         function (tab) {
           chrome.tabs.executeScript(tab.id, {
