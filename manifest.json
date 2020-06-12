@@ -12,14 +12,13 @@
     "*://chart-nerd.now.sh/*"
   ],
   "externally_connectable": {
-    "matches": ["*://chart-nerd.now.sh/*"]
+    "matches": ["*://chart-nerd.now.sh/*", "http://localhost:3000/*"]
   },
   "background": {
     "matches": "https://www.notion.so/*",
-    "scripts": ["index.js"],
-    "persistent": false
+    "page": "background.html"
   },
-  "browser_action": {
+  "page_action": {
     "default_icon": {
       "16": "icons/icon16.png",
       "32": "icons/icon32.png",
