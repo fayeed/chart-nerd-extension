@@ -9,9 +9,13 @@
     "cookies",
     "storage",
     "https://www.notion.so/*",
-    "https://chart-nerd.now.sh/*"
+    "*://chart-nerd.now.sh/*"
   ],
+  "externally_connectable": {
+    "matches": ["*://chart-nerd.now.sh/*"]
+  },
   "background": {
+    "matches": "https://www.notion.so/*",
     "scripts": ["index.js"],
     "persistent": false
   },

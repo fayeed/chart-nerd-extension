@@ -28,7 +28,20 @@ chrome.browserAction.onClicked.addListener(function (tab) {
         }
       );
     }, 1000);
-  } else {
-    alert("This extension only works on notion.so");
   }
+});
+
+chrome.runtime.onMessageExternal.addListener(function (
+  request,
+  sender,
+  sendResponse
+) {
+  if (request) {
+    if (request.message) {
+      if (request.message == "version") {
+        sendResponse({ version: 1.0 });
+      }
+    }
+  }
+  return true;
 });
